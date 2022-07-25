@@ -35,9 +35,10 @@ public class proyectosControlador {
     public void modificar(@PathVariable Integer id,
                           @RequestBody proyectos editProy){
         proyectos proy= proyServ.encontrarProyectos(id);
-        proy.setTipo(editProy.getTipo());
+        proy.setNombre(editProy.getNombre());
         proy.setDescripcion(editProy.getDescripcion());
         proy.setLink(editProy.getLink());
+        proy.setImg(editProy.getImg());
 
         proyServ.crearProyectos(proy);
     }

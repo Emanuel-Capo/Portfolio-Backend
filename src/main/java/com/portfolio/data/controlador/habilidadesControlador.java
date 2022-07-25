@@ -37,6 +37,8 @@ public class habilidadesControlador {
         habilidades hab= habilService.encontrarHabilidades(id);
         hab.setHabilidad(editHabi.getHabilidad());
         hab.setPorcentaje(editHabi.getPorcentaje());
+        hab.setIconVB(editHabi.getIconVB());
+        hab.setIconPath(editHabi.getIconPath());
 
         habilService.crearHabilidades(hab);
     }

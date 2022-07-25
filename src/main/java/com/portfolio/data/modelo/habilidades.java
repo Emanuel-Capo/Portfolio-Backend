@@ -19,12 +19,20 @@ public class habilidades {
     @Column(name = "porcentaje")
     private Integer porcentaje;
 
+    @Column(name = "iconVB")
+    private String iconVB;
+
+    @Column(name = "iconPath")
+    private String iconPath;
+
     public habilidades() {
     }
 
-    public habilidades(Integer id, String habilidad, Integer porcentaje) {
+    public habilidades(Integer id, String habilidad, Integer porcentaje, String iconVB, String iconPath) {
         this.id = id;
         this.habilidad = habilidad;
         this.porcentaje = porcentaje;
+        this.iconVB = iconVB;
+        this.iconPath = iconPath;
     }
 }

@@ -14,20 +14,24 @@ public class proyectos {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name= "tipo")
-    private String tipo;
+    @Column(name= "nombre")
+    private String nombre;
     @Column(name = "descripcion")
     private String descripcion;
     @Column(name = "link")
     private String link;
 
+    @Column(name = "img")
+    private String img;
+
     public proyectos() {
     }
 
-    public proyectos(Integer id, String tipo, String descripcion, String link) {
+    public proyectos(Integer id, String nombre, String descripcion, String link, String img) {
         this.id = id;
-        this.tipo = tipo;
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.link = link;
+        this.img = img;
     }
 }
