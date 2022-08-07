@@ -12,7 +12,7 @@ import java.sql.Date;
 public class educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -20,14 +20,17 @@ public class educacion {
     private String academia;
     @Column(name = "fecha_fin")
     private Date fecha_fin;
+    @Column(name = "img")
+    private String img;
 
     public educacion() {
     }
 
-    public educacion(Integer id, String titulo, String academia, Date fecha_fin) {
+    public educacion(int id, String titulo, String academia, Date fecha_fin, String img) {
         this.id = id;
         this.titulo = titulo;
         this.academia = academia;
         this.fecha_fin = fecha_fin;
+        this.img = img;
     }
 }

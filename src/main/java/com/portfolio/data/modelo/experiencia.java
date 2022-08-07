@@ -25,16 +25,19 @@ public class experiencia {
     private Date fecha_fin;
     @Column(name = "descripcion")
     private String descripcion;
+    @Column(name = "img")
+    private String img;
 
     public experiencia() {
     }
 
-    public experiencia(Integer id, String trabajo, String empresa, Date fecha_inicio, Date fecha_fin, String descripcion) {
+    public experiencia(Integer id, String trabajo, String empresa, Date fecha_inicio, Date fecha_fin, String descripcion, String img) {
         this.id = id;
         this.trabajo = trabajo;
         this.empresa = empresa;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
         this.descripcion = descripcion;
+        this.img = img;
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class UsuariosService implements IUsuariosService{
@@ -14,18 +15,14 @@ public class UsuariosService implements IUsuariosService{
     public usuarioRepositorio usuarioRepo;
 
     @Override
-    public List<usuario> verUsuarios() {
-        return usuarioRepo.findAll();
+    public usuario verUsuario(Integer id) {
+        return usuarioRepo.findById(id).orElse(null);
     }
 
     @Override
-    public void crearUsuarios(usuario usuario) {
-        usuarioRepo.save(usuario);
-    }
+    public boolean validarUsuario(usuario enviado, usuario usuarioDB){
+        return Objects.equals(enviado.getNombre(), usuarioDB.getNombre()) & Objects.equals(enviado.getPassword(), usuarioDB.getPassword());
 
-    @Override
-    public void eliminarUsuarios(Integer id) {
-        usuarioRepo.deleteById(id);
     }
 
 }

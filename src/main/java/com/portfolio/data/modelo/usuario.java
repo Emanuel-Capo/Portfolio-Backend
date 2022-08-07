@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Getter @Setter
 public class usuario {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     private Integer id;
     private String nombre;
     private String password;
